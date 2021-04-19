@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          OneShot Changes
+          OneShot Change
         </a>
       </header>
     </div>
