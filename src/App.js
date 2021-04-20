@@ -5,14 +5,7 @@ import Main from './Pages/Main';
 
 function App() {
   return (
-
-<Router>
-  <Switch>
-    <Route path='/oneshot' exact strict component={Main} />
-  </Switch>
-</Router>
-
-
+<>Testing</>
   )
 }
 
