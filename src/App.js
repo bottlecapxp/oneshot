@@ -8,7 +8,7 @@ function App() {
 
 <Router>
   <Switch>
-    <Route path='/' exact strict component={Main} />
+    <Route path='/oneshot' exact strict component={Main} />
   </Switch>
 </Router>
 
