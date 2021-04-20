@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import {BrowsertRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import './App.css';
-import Main from './Pages/main';
+import Main from './Pages/Main';
 
 function App() {
   return (
