@@ -4,6 +4,9 @@ const Main = () => {
     return(
         <>
         <h1>This is the heading</h1>
+        <h1>This is the heading</h1>
+        <h1>This is the heading</h1>
+        <h1>This is the heading</h1>
 
         </>
     )
