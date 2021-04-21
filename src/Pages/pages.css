@@ -1,0 +1,12 @@
+.choose_lot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#choose_account_holder{
+    width: 80%;
+}
+#new_member_link{
+    text-align: center;
+    color: black;
+}
