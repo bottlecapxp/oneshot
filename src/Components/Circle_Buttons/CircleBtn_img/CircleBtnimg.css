@@ -1,0 +1,6 @@
+.plateCapture{
+    width: 70px !important;
+    height: 70px !important;
+    background-color: #ff4f4f;
+    transform: translateY(-12px);
+}

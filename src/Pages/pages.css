@@ -1,3 +1,4 @@
+/* Landing page */
 .choose_lot{
     display: flex;
     justify-content: center;
@@ -10,3 +11,36 @@
     text-align: center;
     color: black;
 }
+/* Guest Page */
+.content_holder .form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.labels{
+    color: #ff4f4f;
+    margin: 15px 0px 5px 0px;
+}
+.submitBtn{
+  margin-top: 50px;
+  height: 44px;
+  border-radius: 60px;
+  color: #ff4f4f ;
+}
+
+/* Set Time Page */
+.align_timer_btns{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.btns_img_container{
+    margin-top: 40px;
+}
+.timer_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+

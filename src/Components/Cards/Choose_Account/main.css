@@ -3,7 +3,6 @@
     height: 100px;
     background-color: #F0F0F3;
     border: 1px solid #FF4F4F;
-    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
     border-radius: 10px;
     display: flex;
     justify-content: center;

@@ -1,0 +1,23 @@
+#timeInfo{
+    width: 155px;
+    height: 155px;
+    background-color: #ff4f4f;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.timer_holder #time_holder p{
+    font-weight: bold;
+}
+#time{
+    text-align: center;
+}
+
