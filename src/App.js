@@ -7,11 +7,12 @@ import SetTime from './Pages/SetTime';
 
 function App() {
   return (
-<Router>
+    // basename={process.env.PUBLIC_URL}    //
+<Router basename={process.env.PUBLIC_URL}>
   <Switch>
-    <Route path='/oneshot' component={Main} />
-    <Route path='/guest' component={GuestDataCapture} />
-    <Route path='/set-time' component={SetTime} />
+    <Route path='/' exact strict component={Main} />
+    <Route path='/guest' exact strict component={GuestDataCapture} />
+    <Route path='/set-time' exact strict component={SetTime} />
   </Switch>
 </Router>
   )

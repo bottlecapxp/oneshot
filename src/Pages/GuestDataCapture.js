@@ -1,10 +1,12 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
-const GuestDataCapture = () => {
+
+const GuestDataCapture = (props) => {
 // onSubmit
 const submitedDataCapture = (e) =>{
     e.preventDefault()
-    window.location.replace(`${window.location.origin}/set-time`)
+    props.history.push(`/set-time`)
 }
 
     return (
@@ -25,4 +27,4 @@ const submitedDataCapture = (e) =>{
         </div>
     )
 }
-export default GuestDataCapture
+export default withRouter(GuestDataCapture);

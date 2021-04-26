@@ -20,4 +20,7 @@
 #time{
     text-align: center;
 }
+.bar{
+    transform: rotate(rotate(-160 100 100));
+}
 

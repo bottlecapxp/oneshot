@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import '../Choose_Account/main.css'
+import { withRouter } from "react-router-dom";
+
 
 const ChooseAccount = (props) => {
+    // const history = useHistory();
 
     const [selected_option, setSelected_option] = useState({
         title: props.title,
@@ -11,9 +14,7 @@ const ChooseAccount = (props) => {
 
     const Customers_choice = () =>{
         if(selected_option.id === '0'){
-            // window.reload.location
-            window.location.assign(`${window.location.origin}/${selected_option.url}`)
-
+            props.history.push(`/${selected_option.url}`)
         } else if(selected_option.id === '1'){
             // window.reload.location
 
@@ -27,4 +28,4 @@ const ChooseAccount = (props) => {
     )
 }
 
-export default ChooseAccount;
+export default withRouter(ChooseAccount);

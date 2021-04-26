@@ -1,34 +1,38 @@
-import React, {useState} from "react";
-import '../Timer/Timer.css'
+import React, { useState, useEffect } from "react";
+import "../Timer/Timer.css";
 import {
 	CircularInput,
 	CircularTrack,
 	CircularProgress,
 	CircularThumb,
-} from 'react-circular-input'
+} from "react-circular-input";
+import TimerLogic from "./TimerLogic";
 
-const Timer = () => {
-    const [value, setValue] = useState(0.25)
-    const stepValue = v => Math.round(v * 32) / 32
+const Timer = (props) => {
+	const timerLogic = new TimerLogic();
+    const [value, setValue] = useState(null)
+
+    useEffect(()=>{
+        setValue(value + props.addTime)
+    },[props.addTime])
 
 	return (
-    <div className='timer_holder'>
-        <div id='timeInfo'>
-            <div id='time_holder'>
-                <p>Time Remaining</p>
-                <p id='time'>{Math.round(stepValue(value) * 100)}%</p>
-            </div>
-        </div>
+		<div className='timer_holder'>
+			<div id='timeInfo'>
+				<div id='time_holder'>
+					<p>Time Remaining</p>
+					<p id='time'>{timerLogic.scrollTime(timerLogic.stepValue(value))}</p>
+				</div>
+			</div>
 
-		<CircularInput
-		value={stepValue(value)}
-		onChange={v => setValue(stepValue(v))}>
-		<CircularTrack stroke="#eee"/>
-		<CircularProgress  stroke='#ff4f4f' strokeWidth={12}/>
-		<CircularThumb r={15} fill='#F0F0F3' stroke='#ff4f4f'/>
-	</CircularInput>
-
-    </div>
+			<CircularInput
+				value={timerLogic.stepValue(value)}
+				onChange={(v) => setValue(timerLogic.stepValue(v))}>
+				<CircularTrack stroke='#eee' />
+				<CircularProgress className='bar' stroke='#ff4f4f' strokeWidth={12} />
+				<CircularThumb r={15} fill='#F0F0F3' stroke='#ff4f4f' />
+			</CircularInput>
+		</div>
 	);
 };
 export default Timer;
