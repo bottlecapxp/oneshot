@@ -8,17 +8,17 @@
 }
 .global_content_title{
   font-size: 26px;
-  color:#ff4f4f;
+  color:#585858;
 }
 .global_circle_btns{
 width: 55px;
 height: 55px;
 border-radius: 300px;
-border: 1px solid #ff4f4f;
+border: 1px solid #585858;
 }
 
 input{
-border: 1px solid #ff4f4f;
+border: 1px solid #585858;
 border-radius: 5px;
 height: 30px;
 }
