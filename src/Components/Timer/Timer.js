@@ -10,17 +10,17 @@ import TimerLogic from "./TimerLogic";
 
 const Timer = (props) => {
 	const timerLogic = new TimerLogic();
-    const [value, setValue] = useState(null)
+	const [value, setValue] = useState(null);
 
-    useEffect(()=>{
-        setValue(value + props.addTime)
-    },[props.addTime])
+	useEffect(() => {
+		setValue(value + props.addTime);
+	}, [props.addTime]);
 
 	return (
 		<div className='timer_holder'>
 			<div id='timeInfo'>
 				<div id='time_holder'>
-					<p>Time Remaining</p>
+					<p>Set Time</p>
 					<p id='time'>{timerLogic.scrollTime(timerLogic.stepValue(value))}</p>
 				</div>
 			</div>

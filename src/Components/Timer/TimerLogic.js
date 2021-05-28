@@ -14,7 +14,10 @@ setValue = valFunc =>{
 this.value = valFunc
 }
 
-stepValue = v => Math.round(v * 20) / 20
+stepValue = v => {
+    console.log(v)
+    return Math.round(v * 20) / 20
+}
 
 scrollTime = stepVal => {
         var givenValue = Math.round(stepVal*100)

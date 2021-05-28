@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Pages/Main';
 import GuestDataCapture from './Pages/GuestDataCapture';
 import SetTime from './Pages/SetTime';
+import Payment from './Pages/Payment';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Route path='/' exact strict component={Main} />
     <Route path='/guest' exact strict component={GuestDataCapture} />
     <Route path='/set-time' exact strict component={SetTime} />
+    <Route path='/payment' exact strict component={Payment} />
   </Switch>
 </Router>
   )

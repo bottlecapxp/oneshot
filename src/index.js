@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './Components/Header/Header';
-
+<script src="https://gatewayt.moneris.com/chkt/js/chkt_v1.00.js"></script>
 ReactDOM.render(
   <React.StrictMode>
     <Header />
