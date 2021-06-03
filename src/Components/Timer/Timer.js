@@ -12,7 +12,9 @@ const Timer = (props) => {
 	const timerLogic = new TimerLogic();
 	const [value, setValue] = useState(null);
 
+	// Keeps track of time changes
 	useEffect(() => {
+
 		setValue(value + props.addTime);
 	}, [props.addTime]);
 

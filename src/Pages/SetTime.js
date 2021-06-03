@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "../Pages/pages.css";
 import ChooseAccount from "../Components/Cards/Choose_Account/ChooseAccount";
 import CircleTxtBtns from "../Components/Circle_Buttons/CircleBtns_txt/CircleTxtBtns";
@@ -8,14 +8,43 @@ import Timer from "../Components/Timer/Timer";
 const SetTime = () => {
 
 const [btnClickUpdate, setBtnClickUpdate] = useState(0.0)
+const [val, setVal] = useState(0.0)
+
 
 const timeUpdate = (val) => {
-    var newValue = parseFloat(val)
-    setBtnClickUpdate(newValue)
+	var nValue = parseFloat(val)
+	setVal(nValue)
+
+	// check for match
+	if(val === btnClickUpdate){
+		reset()
+		// console.log(btnClickUpdate)
+		// update state with new value
+	}
+	else(
+		setBtnClickUpdate(nValue)
+	)
+
+	// if match >> clear n update state
+}
+
+useEffect(() => {
+	if(btnClickUpdate === 0){
+		console.log('equals 0')
+		setBtnClickUpdate(val)
+	}
+}, [btnClickUpdate])
+
+
+const reset = () =>{
+	setBtnClickUpdate(0.0)
+}
+const update = (nVal) =>{
+	setBtnClickUpdate(nVal)
 }
 
 
-
+// console.log(btnClickUpdate)
 	return (
 		<div className='global_container choose_lot'>
 			<div id='content_holder'>
@@ -40,3 +69,13 @@ const timeUpdate = (val) => {
 };
 
 export default SetTime;
+
+	// var newValue = parseFloat(val)
+	
+	// while (val === btnClickUpdate){
+	// 	setBtnClickUpdate(0.0)
+	// 	if(btnClickUpdate === 0.0){
+	// 		setBtnClickUpdate(newValue)
+	// 	}
+	// }
+	// 	setBtnClickUpdate(newValue)
