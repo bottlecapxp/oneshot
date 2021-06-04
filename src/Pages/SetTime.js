@@ -14,23 +14,17 @@ const [val, setVal] = useState(0.0)
 const timeUpdate = (val) => {
 	var nValue = parseFloat(val)
 	setVal(nValue)
-
 	// check for match
 	if(val === btnClickUpdate){
 		reset()
-		// console.log(btnClickUpdate)
-		// update state with new value
 	}
 	else(
 		setBtnClickUpdate(nValue)
 	)
-
-	// if match >> clear n update state
 }
 
 useEffect(() => {
 	if(btnClickUpdate === 0){
-		console.log('equals 0')
 		setBtnClickUpdate(val)
 	}
 }, [btnClickUpdate])
@@ -39,9 +33,7 @@ useEffect(() => {
 const reset = () =>{
 	setBtnClickUpdate(0.0)
 }
-const update = (nVal) =>{
-	setBtnClickUpdate(nVal)
-}
+
 
 
 // console.log(btnClickUpdate)
