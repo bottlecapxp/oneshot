@@ -13,7 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #848484;
+    color: #585858;
+    margin-bottom: 0px;
 }
 .timer_holder #time_holder p{
     font-weight: bold;
@@ -25,3 +26,19 @@
     transform: rotate(rotate(-160 100 100));
 }
 
+#cost_amount{ 
+    width: 50%;
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+    color: #585858;
+    font-weight: bold;
+}
+.cost_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.price{
+    color: red;
+    height: min-content;
+}

@@ -43,6 +43,7 @@ const reset = () =>{
                 <div className='timer_holder'>
                 <Timer addTime={btnClickUpdate}/>
                 </div>
+				
 
 				<div className='align_timer_btns'>
 					<CircleTxtBtns addTime={timeUpdate} title='+30 Min' time='0.10' />
@@ -52,7 +53,7 @@ const reset = () =>{
 
 				<div className='align_timer_btns btns_img_container'>
 					<CircleBtnsImg title='' img='' />
-					<CircleBtnsImg title='' img='' class='plateCapture'/>
+					<CircleBtnsImg title='Confirm' img='' class='plateCapture'/>
 					<CircleBtnsImg title='' img='' />
 				</div>
 			</div>

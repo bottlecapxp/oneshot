@@ -10,7 +10,7 @@ const CircleBtnsImg = (props) => {
     })
     return (
         <div className={`global_circle_btns box-shadow content-align ${timer.extra}`}>
-            <img src='#' alt=''></img>
+            <span className='confirm_title'>{timer.title}</span>
         </div>
     )
 }

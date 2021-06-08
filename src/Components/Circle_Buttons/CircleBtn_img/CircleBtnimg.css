@@ -1,6 +1,11 @@
 .plateCapture{
     width: 70px !important;
     height: 70px !important;
-    background-color: #ff4f4f;
+    /* background-color: #ff4f4f; */
     transform: translateY(-12px);
 }
+.confirm_title{
+    font-size: 14px;
+    color: rgba(2, 167, 2, 0.966);
+    font-weight: 700;
+    }
