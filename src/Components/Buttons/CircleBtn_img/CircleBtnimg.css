@@ -1,0 +1,25 @@
+.plateCapture{
+    width: 70px !important;
+    height: 70px !important;
+    /* background-color: #ff4f4f; */
+    transform: translateY(-12px);
+}
+.confirm_title{
+    font-size: 14px;
+    color: rgba(2, 167, 2, 0.966);
+    font-weight: 700;
+    }
+    #link{
+        text-decoration: none;
+    }
+    .securePayment_{
+        display: flex;
+        flex-direction: row;
+    }
+    .btn-confirm{
+        width: 84% !important;
+        border: 0.5px solid black;
+        border-radius: 10PX;
+        height: 53px !important;
+        margin-top: 10px;
+    }

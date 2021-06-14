@@ -15,7 +15,7 @@ import TimerLogic from "./TimerLogic";
 
 const Timer = (props) => {
 	const timerLogic = new TimerLogic();
-	const {billing, setBilling} = useContext(PaymentContext)
+	const {billing} = useContext(PaymentContext)
 	// const pGenerator = new PaymentGenerator();
 
 	const [value, setValue] = useState(null);

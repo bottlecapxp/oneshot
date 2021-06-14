@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "../Pages/pages.css";
-import ChooseAccount from "../Components/Cards/Choose_Account/ChooseAccount";
-import CircleTxtBtns from "../Components/Circle_Buttons/CircleBtns_txt/CircleTxtBtns";
-import CircleBtnsImg from "../Components/Circle_Buttons/CircleBtn_img/CircleBtnsImg";
+import CircleTxtBtns from "../Components/Buttons/CircleBtns_txt/CircleTxtBtns";
+import CircleBtnsImg from "../Components/Buttons/CircleBtn_img/CircleBtnsImg";
 import Timer from "../Components/Timer/Timer";
 
 const SetTime = () => {
@@ -52,9 +51,9 @@ const reset = () =>{
 				</div>
 
 				<div className='align_timer_btns btns_img_container'>
-					<CircleBtnsImg title='' img='' />
+					{/* <CircleBtnsImg title='' img='' /> */}
 					<CircleBtnsImg title='Confirm' img='' class='plateCapture'/>
-					<CircleBtnsImg title='' img='' />
+					{/* <CircleBtnsImg title='' img='' /> */}
 				</div>
 			</div>
 		</div>
@@ -62,13 +61,3 @@ const reset = () =>{
 };
 
 export default SetTime;
-
-	// var newValue = parseFloat(val)
-	
-	// while (val === btnClickUpdate){
-	// 	setBtnClickUpdate(0.0)
-	// 	if(btnClickUpdate === 0.0){
-	// 		setBtnClickUpdate(newValue)
-	// 	}
-	// }
-	// 	setBtnClickUpdate(newValue)

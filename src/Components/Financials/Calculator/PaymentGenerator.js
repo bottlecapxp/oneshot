@@ -7,7 +7,8 @@ import { PaymentContext } from '../../../Context/PaymentContext'
 
 
 const PaymentGenerator = (hours, minutes) => {
-    const {billing, setBilling} = useContext(PaymentContext)
+    const {setBilling, setTime} = useContext(PaymentContext)
+ 
 
     // What is the rate per hour? (R$4)
     const hourly_rate = 4
@@ -18,6 +19,8 @@ const PaymentGenerator = (hours, minutes) => {
     //  To calculate rate per minute (minute / 15 * rate per minute)
     useEffect(()=>{
         setBilling(hours * hourly_rate + (minutes / 15) * minute_rate)
+        // Set Selected time here for tracking and to be pushed to local storage by confirm BTN
+        setTime(parseInt(`${hours}${minutes}`))
     }, [hours, minutes])
 
 }

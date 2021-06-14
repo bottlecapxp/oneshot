@@ -21,7 +21,12 @@ input{
 border: 1px solid #585858;
 border-radius: 5px;
 height: 30px;
+padding-left: 10px;
 }
 .box-shadow{
   box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+}
+label{
+  margin-bottom: 2px;
+  color: #FF5759;
 }

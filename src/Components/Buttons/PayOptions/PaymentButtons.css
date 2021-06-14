@@ -1,0 +1,14 @@
+.paymentButton{
+    /* width: 100%;  */
+    padding: 14px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-top: 9%;
+}
+
+.paymentSelectionIcons{
+    width: 17px;
+    height: 17px;
+    margin-right: 7px;
+    transform: translateY(2px);
+}
