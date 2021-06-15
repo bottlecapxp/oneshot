@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom'
 const CardPayment = () => {
 const history = useHistory()
 const pay_now = () =>{
-    history.push('/remaining-time')
+    history.push('/remaining-time/')
 
 
 }

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import {useState} from 'react'
+import {useHistory} from 'react-router-dom'
 import './PaymentButtons.css'
 
 
 
 const PaymentButtons = (props) =>{
+    const history = useHistory()
     const [info, setInfo] = useState({
         title: props.title, 
         image: props.image
@@ -11,7 +13,7 @@ const PaymentButtons = (props) =>{
 
 const payment_action =  () =>{
     if(props.title === 'Pay by Card'){
-        window.location.replace('/secure-cc-payment')
+        history.push('/secure-cc-payment/')
     }
 }
 

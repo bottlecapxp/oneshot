@@ -14,7 +14,7 @@ const ChooseAccount = (props) => {
 
     const Customers_choice = () =>{
         if(selected_option.id === '0'){
-            props.history.push(`/${selected_option.url}`)
+            props.history.push(`/${selected_option.url}/`)
         } else if(selected_option.id === '1'){
             // window.reload.location
 

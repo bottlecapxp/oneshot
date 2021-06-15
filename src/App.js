@@ -20,12 +20,12 @@ function App() {
 <Router basename={process.env.PUBLIC_URL}>
   <Switch>
     <PaymentContext.Provider value={providerValue}>
-    <Route path='/' exact strict component={Main} />
-    <Route path='/guest' exact strict component={GuestDataCapture} />
-    <Route path='/set-time' exact strict component={SetTime} />
-    <Route path='/select-payment' exact strict component={Selectmethod} />
-    <Route path='/secure-cc-payment' exact strict component={CardPayment} />
-    <Route path='/remaining-time' exact strict component={CountDown} />
+    <Route path='/:location' exact strict component={Main} />
+    <Route path='/guest/' exact strict component={GuestDataCapture} />
+    <Route path='/set-time/' exact strict component={SetTime} />
+    <Route path='/select-payment/' exact strict component={Selectmethod} />
+    <Route path='/secure-cc-payment/' exact strict component={CardPayment} />
+    <Route path='/remaining-time/' exact strict component={CountDown} />
     </PaymentContext.Provider>
 
   </Switch>
