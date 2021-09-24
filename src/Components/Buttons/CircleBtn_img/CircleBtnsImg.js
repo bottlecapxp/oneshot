@@ -55,7 +55,7 @@ useEffect(()=>{
     else if(localStorage.getItem('timeStore') != null){
         localStorage.removeItem('timeStore')
         updatingTime(time)
-        console.log(expiredTime)
+
         history.push('/guest/')
        
     }

@@ -21,12 +21,13 @@ useEffect(()=>{
 }, [])
 
 if(localStorage.getItem('lot') === null){
-    localStorage.setItem('lot', props.match.params.location)
+    localStorage.setItem('lot', 4001)
+    // localStorage.setItem('lot', props.match.params.location)
 }
 else if(localStorage.getItem('lot') != null){
 localStorage.removeItem('lot')
 setTimeout(()=>{
-    localStorage.setItem('lot', props.match.params.location)
+    localStorage.setItem('lot', 4001)
 }, 10)
 }
 

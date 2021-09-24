@@ -33,7 +33,7 @@ const Timer = (props) => {
 	var minutes = timerLogic.scrollTime(timerLogic.stepValue(value))%100
 	var timeUnit = 'am'
 	var cTimeUnit = 'am'
-	if(minutes === 0){
+	if(minutes == 0){
 		minutes = parseInt(`${'00'}`)
 	}
 
@@ -48,7 +48,7 @@ const Timer = (props) => {
 	if(expiredMinutes < 10){
 		expiredMinutes = parseInt(`${0}${expiredMinutes}`)
 	}
-	if(expiredHours === 24){
+	if(expiredHours == 24){
 		hours = 12
 		timeUnit = 'am'
 	}
@@ -66,8 +66,10 @@ const Timer = (props) => {
 		cTimeUnit = 'am'
 	}
 	var expTime = `${expiredHours}:${expiredMinutes}${timeUnit}`
+	var expTimeInSecs = (expiredHours * 3600) + (expiredMinutes * 60)
 	var startTime = `${currentTime.getHours()}:${currentTime.getMinutes()}${cTimeUnit}`
 	setExpiredTime(expTime)
+	localStorage.setItem('expTimeInSecs', expTimeInSecs)
 	localStorage.setItem('expTime', expTime)
 	localStorage.setItem('total', totalbilling)
 	// Keeps track of time changes
@@ -84,10 +86,10 @@ const Timer = (props) => {
 
 
 		setValue(value + props.addTime);
-		if (dayTime === 0) {
+		if (dayTime == 0) {
 			setDayTimeValidation(true)
 		} else { setDayTimeValidation(false) }
-		if (nightTime === 0) {
+		if (nightTime == 0) {
 			setNightTimeValidation(true)
 		}
 		localStorage.setItem('startTime', startTime)

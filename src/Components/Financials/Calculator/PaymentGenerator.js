@@ -67,9 +67,10 @@ const PaymentGenerator = (hours, minutes) => {
 
     
     useEffect(()=>{
-        console.log(`/hour: ${hours}`)
-           console.log(`/minute: ${minutes}`)
-           console.log(`currentTime: ${currentTime}`)
+        console.log(`/accumalated-time: ${accumalatedTime}`)
+        console.log(setLimit)
+        console.log(currentTime)
+
 
         // STRICTLY DAYTIME
         if(currentTime > 600 && accumalatedTime <= 1800){ // current_time < 

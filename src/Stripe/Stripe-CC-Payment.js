@@ -49,24 +49,28 @@ const StripePayment = () => {
 
         if (!error) {
             try {
-                const { id } = paymentMethod
-                const response = await axios.post("http://localhost:4000/payment", {
-                    name: userInfo.name, 
-                    phone: userInfo.phone, 
-                    license: userInfo.license,
-                    amount: totalbilling * 100,
-                    id
-                })
-                if (response.data.success) {
-                    // setTimeOut to Change to next page
-                    setTimeout(()=>{
+                setTimeout(()=>{
                         history.push('/remaining-time/')
-                    }, 2000)
-                        console.log("SuccessFul Payment")
-                        setSuccess(true)
+                        }, 2000)
+                setSuccess(true)
+                // const { id } = paymentMethod
+                // const response = await axios.post("https://bottlecapxp.github.io/oneshot/payment", {
+                //     name: userInfo.name, 
+                //     phone: userInfo.phone, 
+                //     license: userInfo.license,
+                //     amount: totalbilling * 100,
+                //     id
+                // })
+                // if (response.data.success) {
+                //     // setTimeOut to Change to next page
+                //     setTimeout(()=>{
+                //         history.push('/remaining-time/')
+                //     }, 2000)
+                //         console.log("SuccessFul Payment")
+                //         setSuccess(true)
                  
                   
-                }
+                // }
 
             } catch (error) {
                 // Change the title information

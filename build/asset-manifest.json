@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/oneshot/static/css/main.44207d94.chunk.css",
-    "main.js": "/oneshot/static/js/main.9efa9cce.chunk.js",
-    "main.js.map": "/oneshot/static/js/main.9efa9cce.chunk.js.map",
-    "runtime-main.js": "/oneshot/static/js/runtime-main.e1120f51.js",
-    "runtime-main.js.map": "/oneshot/static/js/runtime-main.e1120f51.js.map",
-    "static/js/2.22f10b65.chunk.js": "/oneshot/static/js/2.22f10b65.chunk.js",
-    "static/js/2.22f10b65.chunk.js.map": "/oneshot/static/js/2.22f10b65.chunk.js.map",
-    "static/js/3.3df38193.chunk.js": "/oneshot/static/js/3.3df38193.chunk.js",
-    "static/js/3.3df38193.chunk.js.map": "/oneshot/static/js/3.3df38193.chunk.js.map",
+    "main.css": "/oneshot/static/css/main.7d6303c2.chunk.css",
+    "main.js": "/oneshot/static/js/main.a840db0f.chunk.js",
+    "main.js.map": "/oneshot/static/js/main.a840db0f.chunk.js.map",
+    "runtime-main.js": "/oneshot/static/js/runtime-main.ef3a6ab8.js",
+    "runtime-main.js.map": "/oneshot/static/js/runtime-main.ef3a6ab8.js.map",
+    "static/js/2.04b16ec8.chunk.js": "/oneshot/static/js/2.04b16ec8.chunk.js",
+    "static/js/2.04b16ec8.chunk.js.map": "/oneshot/static/js/2.04b16ec8.chunk.js.map",
+    "static/js/3.09892b73.chunk.js": "/oneshot/static/js/3.09892b73.chunk.js",
+    "static/js/3.09892b73.chunk.js.map": "/oneshot/static/js/3.09892b73.chunk.js.map",
     "index.html": "/oneshot/index.html",
-    "static/css/main.44207d94.chunk.css.map": "/oneshot/static/css/main.44207d94.chunk.css.map",
-    "static/js/2.22f10b65.chunk.js.LICENSE.txt": "/oneshot/static/js/2.22f10b65.chunk.js.LICENSE.txt",
+    "static/css/main.7d6303c2.chunk.css.map": "/oneshot/static/css/main.7d6303c2.chunk.css.map",
+    "static/js/2.04b16ec8.chunk.js.LICENSE.txt": "/oneshot/static/js/2.04b16ec8.chunk.js.LICENSE.txt",
     "static/media/Apple.87c58277.png": "/oneshot/static/media/Apple.87c58277.png",
+    "static/media/Apple_logo_white.47258099.png": "/oneshot/static/media/Apple_logo_white.47258099.png",
     "static/media/Google.fde133a6.svg": "/oneshot/static/media/Google.fde133a6.svg",
     "static/media/ccIcon.3d2f6b6e.svg": "/oneshot/static/media/ccIcon.3d2f6b6e.svg",
+    "static/media/darkModeLogo.e4dbe049.svg": "/oneshot/static/media/darkModeLogo.e4dbe049.svg",
+    "static/media/loading.d57bfd24.gif": "/oneshot/static/media/loading.d57bfd24.gif",
     "static/media/logo.40fca5a8.svg": "/oneshot/static/media/logo.40fca5a8.svg",
-    "static/media/logo.6ce24c58.svg": "/oneshot/static/media/logo.6ce24c58.svg",
     "static/media/sun.925bac9e.svg": "/oneshot/static/media/sun.925bac9e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e1120f51.js",
-    "static/js/2.22f10b65.chunk.js",
-    "static/css/main.44207d94.chunk.css",
-    "static/js/main.9efa9cce.chunk.js"
+    "static/js/runtime-main.ef3a6ab8.js",
+    "static/js/2.04b16ec8.chunk.js",
+    "static/css/main.7d6303c2.chunk.css",
+    "static/js/main.a840db0f.chunk.js"
   ]
 }
