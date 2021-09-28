@@ -44,7 +44,7 @@ function App() {
   <Elements stripe={stripePromise}>
     <PaymentContext.Provider value={providerValue}>
     {/* <Route path='/:location' exact strict component={Main} />   Commented out for testing*/} 
-    <Route path='/' exact strict component={Main} />
+    <Route path='/:lot' exact strict component={Main} />
     <Route path='/guest/' exact strict component={GuestDataCapture} />
     <Route path='/set-time/' exact strict component={SetTime} />
     <Route path='/select-payment/' exact strict component={Selectmethod} />

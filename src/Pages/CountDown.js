@@ -100,7 +100,7 @@ export const CountDown = () => {
             h = date_y.getHours()
             s = date_y.getSeconds()
             sum = (h * 3600) + (m * 60)
-            console.log(`sum: ${sum} - ${h}:${m}:${s}`)
+            // console.log(`sum: ${sum} - ${h}:${m}:${s}`)
         }
       
      
