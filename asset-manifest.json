@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/oneshot/static/css/main.5e7c261c.chunk.css",
+    "main.css": "/oneshot/static/css/main.5a7a7830.chunk.css",
     "main.js": "/oneshot/static/js/main.1aa9d9f3.chunk.js",
     "main.js.map": "/oneshot/static/js/main.1aa9d9f3.chunk.js.map",
     "runtime-main.js": "/oneshot/static/js/runtime-main.7b05bbb4.js",
@@ -10,7 +10,7 @@
     "static/js/3.02b43e83.chunk.js": "/oneshot/static/js/3.02b43e83.chunk.js",
     "static/js/3.02b43e83.chunk.js.map": "/oneshot/static/js/3.02b43e83.chunk.js.map",
     "index.html": "/oneshot/index.html",
-    "static/css/main.5e7c261c.chunk.css.map": "/oneshot/static/css/main.5e7c261c.chunk.css.map",
+    "static/css/main.5a7a7830.chunk.css.map": "/oneshot/static/css/main.5a7a7830.chunk.css.map",
     "static/js/2.b8b31c4f.chunk.js.LICENSE.txt": "/oneshot/static/js/2.b8b31c4f.chunk.js.LICENSE.txt",
     "static/media/Apple.87c58277.png": "/oneshot/static/media/Apple.87c58277.png",
     "static/media/Apple_logo_white.47258099.png": "/oneshot/static/media/Apple_logo_white.47258099.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.7b05bbb4.js",
     "static/js/2.b8b31c4f.chunk.js",
-    "static/css/main.5e7c261c.chunk.css",
+    "static/css/main.5a7a7830.chunk.css",
     "static/js/main.1aa9d9f3.chunk.js"
   ]
 }
