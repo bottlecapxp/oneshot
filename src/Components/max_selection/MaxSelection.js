@@ -6,7 +6,7 @@ class MaxSelection extends Component {
     constructor(props) {
         super(props)
         this.date = new Date()
-        this.getExpTime = localStorage.getItem('expTime').split(':')
+        this.getExpTime = (localStorage.getItem('expTime')?localStorage.getItem('expTime').split(':'):'')
         this.hours = this.getExpTime[0]
         this.hour = this.date.getHours()
         this.minutes = this.date.getMinutes()

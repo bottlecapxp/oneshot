@@ -43,7 +43,7 @@ const StripePayment = () => {
     const CARD_ELEMENT_OPTIONS = {
         style: {
             base: {
-                color: 'black'
+                color: 'black' 
             }
         }
     }
