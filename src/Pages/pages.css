@@ -18,11 +18,26 @@
 /* Guest Page */
 .WelcomeHeadder{
     font-weight: 300;
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: #585858;
+    margin-top: 25px;
+    margin-bottom: -30px;
+}
+.tc_holder{ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.terms_condition{ 
+    border: none;
+    background: none;
+    margin-top: 20px;
+    border-bottom: 1px solid #585858; 
+    width: 50%;
 }
 .content_holder{
     width: 70%;
+    margin-top: -16vh;
 }
 .content_holder .form{
     display: flex;
@@ -33,6 +48,10 @@
     color: #585858;
     margin: 15px 0px 5px 0px;
 }
+.labels:after{ 
+    content: "*";
+    content: red;
+}
 .submitBtn{
 background-color: #F0F0F3;
   margin-top: 50px;
@@ -40,6 +59,8 @@ background-color: #F0F0F3;
   border-radius: 60px;
   color: red ;
   box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .submitBtn_dark{
       margin-top: 50px;
@@ -247,6 +268,19 @@ align-items: center;
     box-shadow: 2px 4px 16px rgba(0, 71, 94, 0.2), -4px -4px 16px #FFFFFF;
     /* animation: secondsCounter 1s infinite; */
 }
+.countdown_adjustment_orange{
+    border: 1px solid #ff7b00 !important;
+}
+.countdown_adjustment_red{
+    border: 1px solid red !important;
+}
+.txtRed{ 
+    color: red !important;
+}
+.txtOrange{ 
+    color: #ff7b00 !important;
+}
+
 .countdown_adjustment_dark{
     width: 200px;
     height: 200px;
@@ -263,13 +297,21 @@ align-items: center;
     color: white;
     /* animation: secondsCounter 1s infinite; */
 }
+.pulse_holder{
+    margin-top: -40%;
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
 .circleAnimation{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #e9e9f3;
     z-index: 1;
-    margin-top: -40%;
     position: absolute;
     animation: secondsCounter 1s infinite;
 }
@@ -298,4 +340,13 @@ align-items: center;
 .digits{
     font-size: 1.2em;
     color: rgba(#292929, 60) !important;
+}
+.lot-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 8vh;
+
+    
 }

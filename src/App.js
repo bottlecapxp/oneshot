@@ -24,7 +24,7 @@ function App() {
   const [dayTime, setDayTime] = useState()
   const [dayTimeBilling, setDayTimeBilling] = useState()
   const [userInfo, setUserInfo] = useState()
-  const [darkMode, setDarkMode] = useState(1800)
+  const [darkMode, setDarkMode] = useState(1200)
   const providerValue = useMemo(() => ({
     time, setTime, 
     nightTime, setNightTime,
@@ -44,9 +44,9 @@ function App() {
   <Elements stripe={stripePromise}>
     <PaymentContext.Provider value={providerValue}>
     {/* <Route path='/:location' exact strict component={Main} />   Commented out for testing*/} 
-    <Route path='/:lot' exact strict component={Main} />
+    {/* <Route path='/:lot' exact strict component={Main} /> */}
     <Route path='/guest/' exact strict component={GuestDataCapture} />
-    <Route path='/set-time/' exact strict component={SetTime} />
+    <Route path='/:lot' exact strict component={SetTime} />
     <Route path='/select-payment/' exact strict component={Selectmethod} />
     <Route path='/remaining-time/' exact strict component={CountDown} />
     <Route path='/checkout/' exact strict component={StripePayment} />

@@ -1,10 +1,12 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { PaymentContext } from '../Context/PaymentContext'
 import Receipt from '../Components/Receipt/Receipt'
+import {useHistory} from 'react-router-dom'
 
 
 
 export const CountDown = () => {
+    const history = useHistory()
     const { darkMode } = useContext(PaymentContext)
     const getSetTime = localStorage.getItem('timeStore')
     const [showReceipt, setShowReceipt] = useState(false)
@@ -15,6 +17,10 @@ export const CountDown = () => {
         circleAnimation: 'circleAnimation',
         countDownAdj: 'countdown_adjustment'
     })
+
+        var orange;
+        var orangeTxt;
+        var verbageChange = 'Active Session'
 
     const [containerStyling, setContainerStyling] = useState({
         divStyle: {
@@ -42,6 +48,13 @@ export const CountDown = () => {
     const toggle = () => {
         setShowReceipt(!showReceipt)
     }
+
+
+const [activeSession, setActiveSession] = useState({ 
+    style: { 
+
+    }
+})
 
     var getExpTimeInSecs = localStorage.getItem('expTimeInSecs')
     var date = new Date()
@@ -94,6 +107,8 @@ export const CountDown = () => {
 
 
     const timer = () => {
+        // Set conditions for active session behavior
+        // color, text, sms
         var date_y = new Date()
         if(date_y.getMinutes() > m || date_y.getHours() > h || date_y.getSeconds() > s){
             m = date_y.getMinutes()
@@ -106,6 +121,9 @@ export const CountDown = () => {
      
         count = setLocalStorage('count', getExpTimeInSecs - sum);
         if (count <= 0) {
+            localStorage.setItem('count', 0)
+            localStorage.setItem('expTimeInSecs', 0)
+
             setCountDown({
                 hours: '00',
                 mins: '00',
@@ -130,10 +148,23 @@ export const CountDown = () => {
 
     }
 
-
-
-
-
+const make_change_base_on_time = () => { 
+if(countDown.hours == 0 && countDown.mins < 20){ 
+  orange = 'countdown_adjustment_orange'
+  orangeTxt = 'txtOrange'
+}
+if(countDown.hours == 0 && countDown.mins <= 10){ 
+    orange = 'countdown_adjustment_red'
+    orangeTxt = 'txtRed'
+    verbageChange = 'Expiring Soon'
+  }
+  if(countDown.mins == 0 && countDown.hours == 0){ 
+    orange = 'countdown_adjustment_red'
+    orangeTxt = 'txtRed'
+    verbageChange = 'Session Ended'
+  }
+}
+make_change_base_on_time()
 
 
 
@@ -180,6 +211,7 @@ export const CountDown = () => {
                 }
             })
         }
+        
 
 
 
@@ -187,26 +219,28 @@ export const CountDown = () => {
     }, [])
 
     return (
-        <div className={`${darkModeStyle.globalContainer} choose_lot`}>
+        <div style={{overflowY: 'hidden'}} className={`${darkModeStyle.globalContainer} choose_lot ${orange}`}>
             <div style={containerStyling.divStyle}>
+                <div className='pulse_holder'>
                 <div className={darkModeStyle.circleAnimation}></div>
                 <div className='countdown_digits_holder'>
-                    <div className={darkModeStyle.countDownAdj}>
-                        <h3 style={{ marginBottom: '0px' }}>Active Session</h3>
+                    <div className={`${darkModeStyle.countDownAdj} ${orange}`}>
+                        <h3 className={orangeTxt} style={{ marginBottom: '0px' }}>{verbageChange}</h3>
                         <div className='countdown_digits'>
-                            <span className='digits'>{`${countDown.hours}h`}</span>
-                            <span className='digits'>{`${countDown.mins}m`}</span>
-                            <span className='digits' >{countDown.secs == 60?'00':`${countDown.secs}`}s</span>
+                            <span className={`digits ${orangeTxt}`}>{`${countDown.hours}h`}</span>
+                            <span className={`digits ${orangeTxt}`}>{`${countDown.mins}m`}</span>
+                            <span className={`digits ${orangeTxt}`} >{countDown.secs == 60?'00':`${countDown.secs}`}s</span>
                         </div>
                     </div>
 
                 </div>
-                {showReceipt ? <Receipt /> : ''}
+                </div>
+                {showReceipt ? <Receipt close={toggle}/> : ''}
 
-                <h4 style={{ marginTop: '30%', color: darkModeStyle.color }}>Your Time Expires at: {expiredTime}</h4>
+                <h4 className={orangeTxt} style={{ marginTop: '30%', color: darkModeStyle.color }}>Your Time Expires at: {expiredTime}</h4>
                 <div style={containerStyling.buttonDiv}>
-                    <span style={containerStyling.buttonStyle}>Extend My Time</span>
-                    <span onClick={toggle} style={containerStyling.buttonStyle}>View My Receipt</span>
+                    <span className={`${orange} ${orangeTxt}`} style={containerStyling.buttonStyle} onClick={()=>{history.push('/1111')}}>Extend My Time</span>
+                    <span className={`${orange} ${orangeTxt}`} onClick={toggle} style={containerStyling.buttonStyle}>View My Receipt</span>
                 </div>
 
             </div>

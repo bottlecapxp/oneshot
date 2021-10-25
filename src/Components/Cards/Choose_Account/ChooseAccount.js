@@ -18,6 +18,12 @@ const ChooseAccount = (props) => {
                 chooseAccountStyles: 'account_card_dark'
             })
         }
+        if(darkMode < 1800 || darkMode > 600){
+            setDarkModeStyle({
+                chooseAccountStyles: 'account_card'
+                
+            })
+        }
     }, [])
 
     const [selected_option, setSelected_option] = useState({

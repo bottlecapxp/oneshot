@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import Header from './Components/Header/Header';
 <script src="https://gatewayt.moneris.com/chkt/js/chkt_v1.00.js"></script>
 
-const darkMode = 1800
-const root = document.getElementById('root')
-if(darkMode >= 1800){
-root.style.backgroundColor = '#121921'
-}
+// const darkMode = 700
+// const root = document.getElementById('root')
+// if(darkMode >= 1800){
+// root.style.backgroundColor = '#121921'
+// }
+// if(darkMode < 1800 || darkMode > 600){
+//   root.style.backgroundColor = 'white'
+// }
 ReactDOM.render(
   <React.StrictMode>
     <Header />

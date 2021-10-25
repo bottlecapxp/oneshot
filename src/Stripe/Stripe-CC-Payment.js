@@ -43,7 +43,7 @@ const StripePayment = () => {
     const CARD_ELEMENT_OPTIONS = {
         style: {
             base: {
-                color: 'white'
+                color: 'black'
             }
         }
     }
@@ -91,6 +91,30 @@ const StripePayment = () => {
 
     } // end of handle submit
 
+
+    const msg_data = {
+        'number': localStorage.getItem('phone'),
+    }
+    const send_message = () => {
+        if(success){
+            fetch('https://osparking.pythonanywhere.com/on-payment', {
+                method: 'POST', 
+                mode: 'cors', 
+                headers: {
+                    'Access-Control-Allow-Origin':'*',
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(msg_data)
+            })
+            .then((promise) => promise.json())
+            .then((data) => {
+                console.log(data)
+            })
+        }
+
+    }
+    send_message()
+
     useEffect(() => {
         if (darkMode >= 1800 || darkMode <= 600) {
             setDarkModeStyle({
@@ -111,7 +135,8 @@ const StripePayment = () => {
                         <form onSubmit={handleSubmit} className={darkModeStyle.card}> {/* this should be a form */}
                             {/* Enter your card numner */}
                             <div className='stacked_'>
-                                <label style={{ color: darkModeStyle.color }} id='CCnumberLabel'>Enter Your Card Number</label>
+                                {/* darkModeStyle.color */}
+                                <label style={{ color: 'black' }} id='CCnumberLabel'>Enter Your Card Number</label>
                                 <div id='CCnumber'>
                                     <CardNumberElement options={CARD_ELEMENT_OPTIONS} />
                                 </div>

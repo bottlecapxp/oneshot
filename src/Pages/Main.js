@@ -18,18 +18,25 @@ useEffect(()=>{
             createNewAccount: 'new_member_link_dark'
         })
     }
+    if(darkMode < 1800 || darkMode > 600){
+        setDarkModeStyle({
+            globalContainer: 'global_container',
+            createNewAccount: 'new_member_link'
+            
+        })
+    }
 }, [])
 
-if(localStorage.getItem('lot') === null){
-    // localStorage.setItem('lot', 4001)
-    localStorage.setItem('lot', props.match.params.lot)
-}
-else if(localStorage.getItem('lot') != null){
-localStorage.removeItem('lot')
-setTimeout(()=>{
-    localStorage.setItem('lot', props.match.params.lot)
-}, 10)
-}
+// if(localStorage.getItem('lot') === null){
+//     // localStorage.setItem('lot', 4001)
+//     localStorage.setItem('lot', props.match.params.lot)
+// }
+// else if(localStorage.getItem('lot') != null){
+// localStorage.removeItem('lot')
+// setTimeout(()=>{
+//     localStorage.setItem('lot', props.match.params.lot)
+// }, 10)
+// }
 
 
     return(

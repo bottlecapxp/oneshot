@@ -6,7 +6,7 @@
 }
 .confirm_title{
     font-size: 14px;
-    color: rgba(2, 167, 2, 0.966);
+    color: #1E2834;
     font-weight: 700;
     text-decoration: none;
     }
@@ -17,7 +17,7 @@
     }
     .btn-confirm{
         width: 84% !important;
-        border: 0.5px solid black;
+        border: 1px solid black;
         border-radius: 10PX;
         height: 53px !important;
         margin-top: 10px;

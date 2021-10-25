@@ -21,6 +21,12 @@ useEffect(()=>{
             
         })
     }
+    if(darkMode < 1800 || darkMode > 600){
+        setDarkModeStyle({
+            buttonStyles: 'btn-confirm',
+            
+        })
+    }
 }, [])
 
     const [timer] = useState({
@@ -68,7 +74,7 @@ useEffect(()=>{
 
     return (
         <span onClick={payment_action} className={`${darkModeStyle.buttonStyles} content-align ${timer.extra}`}>
-            <span className='confirm_title'>{timer.title}</span>
+            <span   className='confirm_title'>{timer.title}</span>
         </span>
     )
 }
